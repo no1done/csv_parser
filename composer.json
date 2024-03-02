@@ -1,0 +1,38 @@
+{
+    "name": "no1done/street",
+    "description": "Tech Test Solution",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": "~8.3.0",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+	"classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "Application\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ApplicationTest\\": "tests/"
+        }
+    },
+    "scripts": {
+        "serve": [
+            "Composer\\Config::disableProcessTimeout",
+            "php -S 0.0.0.0:8080 -t public"
+        ],
+        "test": "vendor/bin/phpunit"
+    },
+    "scripts-descriptions": {
+        "serve": "Start the built-in PHP web server and serve the application.",
+        "test": "Run unit tests."
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9",
+        "squizlabs/php_codesniffer": "*"
+    }
+}
